@@ -23,3 +23,7 @@ Abrí `index.html` en el navegador, o levantá un servidor local:
 ```bash
 npx serve .
 ```
+
+## Publicación
+
+Conectado con Hostinger: cada `git push` a `main` se publica solo en larryrivera.dev.
