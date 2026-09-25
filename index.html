@@ -189,7 +189,6 @@ h2{font-family:var(--display);font-size:clamp(34px,4.6vw,58px);line-height:1.04;
 .fact b{font-family:var(--display);font-size:40px;line-height:1;display:block;margin-bottom:10px}
 .fact span{color:var(--muted);font-size:14px}
 .fact.wide{grid-column:span 2;display:flex;align-items:center;gap:18px}
-.fact.wide .badge{flex:none;width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-family:var(--mono);font-weight:700;background:linear-gradient(135deg,var(--neon-2),var(--neon-3));color:#07070c}
 
 
 .me{display:flex;align-items:center;gap:18px;margin-top:36px;padding:14px 22px 14px 14px;border:1px solid var(--line);border-radius:22px;background:var(--card);width:max-content;max-width:100%}
@@ -204,6 +203,13 @@ h2{font-family:var(--display);font-size:clamp(34px,4.6vw,58px);line-height:1.04;
 .timeline b{display:block;font-weight:600;font-size:15px}
 .timeline small{color:var(--muted);font-size:14px}
 
+.fact.jl{display:block;padding:0;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
+.fact.jl:hover{border-color:rgba(139,92,246,.7);transform:translateY(-3px);box-shadow:0 14px 40px rgba(124,58,237,.3)}
+.fact.jl img{width:100%;height:auto;aspect-ratio:8/3;object-fit:cover;transition:transform .5s}
+.fact.jl:hover img{transform:scale(1.03)}
+.jl-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.jl-foot strong{color:var(--text);font-weight:600}
+.jl-foot .go{font-family:var(--mono);font-size:12px;color:#a78bfa}
 /* ---------- habilidades ---------- */
 .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
 .skill{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;overflow:hidden}
@@ -460,8 +466,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
       <div class="facts">
         <div class="fact reveal"><b class="neon">2</b><span data-en="countries with my code in production">países con código mío en producción</span></div>
         <div class="fact reveal d1"><b>4+</b><span data-en="years working with customers, cash and inventory">años trabajando con clientes, caja e inventarios</span></div>
-        <div class="fact wide reveal d2"><div class="badge">JL</div><span data-en="<strong style='color:var(--text)'>Co-founder of JLDigitalCrafters</strong>, a small studio building websites and custom systems for small businesses.">
-          <strong style="color:var(--text)">Cofundador de JLDigitalCrafters</strong>, un estudio pequeño que hace sitios web y sistemas a la medida para PYMEs.</span></div>
+        <a class="fact wide jl reveal d2" href="https://jldigitalcrafters.com" target="_blank" rel="noopener">
+          <img src="assets/jldigitalcrafters.webp" alt="JL DigitalCrafters — Custom Websites &amp; Software for Small Businesses" width="2000" height="750" loading="lazy">
+          <span class="jl-foot"><span data-en="<strong>Co-founder</strong> · my web &amp; software studio">
+            <strong>Cofundador</strong> · mi estudio de sitios web y software</span><span class="go">jldigitalcrafters.com ↗</span></span>
+        </a>
       </div>
 
       <ol class="timeline">
